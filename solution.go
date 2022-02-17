@@ -19,10 +19,10 @@ var SidesCircle = 0
 func CalcSquare(sideLen float64, sides int) float64 {
 
 	if sides == 0 {
-		sqr := sideLen * math.Pi
+		sqr := sideLen * math.Pi * sideLen
 		return sqr
 	} else if sides == 3 {
-		sqr := 0.5 * sideLen * sideLen * (math.Sqrt(3) / 2)
+		sqr := 0.25 * sideLen * sideLen * math.Sqrt(3)
 		return sqr
 	} else {
 		sqr := sideLen * sideLen
