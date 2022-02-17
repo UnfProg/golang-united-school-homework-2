@@ -1,9 +1,7 @@
 package square
 
 import (
-	"log"
 	"math"
-	"strconv"
 )
 
 // Define custom int type to hold sides number and update CalcSquare signature by replacing #yourTypeNameHere#
@@ -18,12 +16,12 @@ var SidesTriangle = 3
 var SidesSquare = 4
 var SidesCircle = 0
 
-func CalcSquare(sideLen float64, sidesNum int) float64 {
-	
-	if sidesNum == 0 {
+func CalcSquare(sideLen float64, sides int) float64 {
+
+	if sides == 0 {
 		sqr := sideLen * math.Pi
 		return sqr
-	} else if sidesNum == 3 {
+	} else if sides == 3 {
 		perimetr := 3 * sideLen
 		sqr := math.Sqrt(perimetr * (perimetr - sideLen) * (perimetr - sideLen) * (perimetr - sideLen))
 		return sqr
@@ -32,3 +30,4 @@ func CalcSquare(sideLen float64, sidesNum int) float64 {
 		return sqr
 	}
 }
+
