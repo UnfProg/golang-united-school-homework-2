@@ -18,15 +18,12 @@ var SidesTriangle = 3
 var SidesSquare = 4
 var SidesCircle = 0
 
-func CalcSquare(sideLen float64, sidesNum string) float64 {
-	sidesNums, err := strconv.Atoi(sidesNum)
-	if err != nil {
-		log.Fatal(err)
-	}
-	if sidesNums == 0 {
+func CalcSquare(sideLen float64, sidesNum int) float64 {
+	
+	if sidesNum == 0 {
 		sqr := sideLen * math.Pi
 		return sqr
-	} else if sidesNums == 3 {
+	} else if sidesNum == 3 {
 		perimetr := 3 * sideLen
 		sqr := math.Sqrt(perimetr * (perimetr - sideLen) * (perimetr - sideLen) * (perimetr - sideLen))
 		return sqr
